@@ -161,7 +161,7 @@ func _page_map() -> void:
 	map_panel.add_child(map)
 	_note("На карте отмечены аэропорты из локальной базы. Маршрутные дуги и движущиеся маркеры рейсов будут расширены в следующих итерациях.")
 	for route in GameData.state.routes:
-		_row(route.from + "  →  " + route.to, str(route.distance) + " км", true)
+		_row(route["from"] + "  →  " + route["to"], str(route.distance) + " км", true)
 
 func _page_fleet() -> void:
 	_section("МОЙ ФЛОТ", "%d воздушных судов" % GameData.state.aircraft.size())
@@ -281,7 +281,7 @@ func _show_company_setup() -> void:
 		_refresh()
 	)
 	content.add_child(start)
-	_note("Стартовый капитал: $25 000 000. В игре уже доступен каталог самолётов, аэропорты, покупка флота, создание маршрутов и базовая финансовая симуляция.")
+	_note("Стартовый капитал: $45 000 000. В игре уже доступен каталог самолётов, аэропорты, покупка флота, создание маршрутов и базовая финансовая симуляция.")
 
 func _airport_options() -> Array:
 	var result := []
