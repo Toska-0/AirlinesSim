@@ -214,7 +214,7 @@ func _save_state(path: String) -> bool:
 
 func load_game(slot: String = "autosave") -> bool:
 	var path := SAVE_DIR.path_join(slot + ".json")
-	if not FileAccess.file_exists(path):
+	if not FileAccess.file_exists(path) and slot == "autosave":
 		path = AUTOSAVE_PATH
 	if not FileAccess.file_exists(path):
 		return false
