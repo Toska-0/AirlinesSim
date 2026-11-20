@@ -1,0 +1,222 @@
+[
+  {
+    "iata": "JFK",
+    "name": "John F. Kennedy International",
+    "city": "New York",
+    "country": "United States",
+    "lat": 40.6413,
+    "lon": -73.7781,
+    "population": 8400000,
+    "runways": 4,
+    "category": "Международный"
+  },
+  {
+    "iata": "LHR",
+    "name": "London Heathrow",
+    "city": "London",
+    "country": "United Kingdom",
+    "lat": 51.47,
+    "lon": -0.4543,
+    "population": 9000000,
+    "runways": 2,
+    "category": "Международный"
+  },
+  {
+    "iata": "CDG",
+    "name": "Paris Charles de Gaulle",
+    "city": "Paris",
+    "country": "France",
+    "lat": 49.0097,
+    "lon": 2.5479,
+    "population": 11000000,
+    "runways": 4,
+    "category": "Международный"
+  },
+  {
+    "iata": "FRA",
+    "name": "Frankfurt Airport",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "lat": 50.0379,
+    "lon": 8.5622,
+    "population": 5000000,
+    "runways": 3,
+    "category": "Международный"
+  },
+  {
+    "iata": "AMS",
+    "name": "Amsterdam Airport Schiphol",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "lat": 52.3105,
+    "lon": 4.7683,
+    "population": 2500000,
+    "runways": 6,
+    "category": "Крупный международный"
+  },
+  {
+    "iata": "DXB",
+    "name": "Dubai International",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "lat": 25.2532,
+    "lon": 55.3657,
+    "population": 3500000,
+    "runways": 3,
+    "category": "Международный"
+  },
+  {
+    "iata": "IST",
+    "name": "Istanbul Airport",
+    "city": "Istanbul",
+    "country": "Türkiye",
+    "lat": 41.2753,
+    "lon": 28.7519,
+    "population": 15500000,
+    "runways": 5,
+    "category": "Крупный международный"
+  },
+  {
+    "iata": "SIN",
+    "name": "Singapore Changi",
+    "city": "Singapore",
+    "country": "Singapore",
+    "lat": 1.3644,
+    "lon": 103.9915,
+    "population": 5900000,
+    "runways": 4,
+    "category": "Международный"
+  },
+  {
+    "iata": "HND",
+    "name": "Tokyo Haneda",
+    "city": "Tokyo",
+    "country": "Japan",
+    "lat": 35.5494,
+    "lon": 139.7798,
+    "population": 14000000,
+    "runways": 3,
+    "category": "Международный"
+  },
+  {
+    "iata": "LAX",
+    "name": "Los Angeles International",
+    "city": "Los Angeles",
+    "country": "United States",
+    "lat": 33.9416,
+    "lon": -118.4085,
+    "population": 3900000,
+    "runways": 4,
+    "category": "Международный"
+  },
+  {
+    "iata": "ORD",
+    "name": "Chicago O'Hare",
+    "city": "Chicago",
+    "country": "United States",
+    "lat": 41.9742,
+    "lon": -87.9073,
+    "population": 2700000,
+    "runways": 8,
+    "category": "Крупный международный"
+  },
+  {
+    "iata": "ATL",
+    "name": "Hartsfield-Jackson Atlanta",
+    "city": "Atlanta",
+    "country": "United States",
+    "lat": 33.6407,
+    "lon": -84.4277,
+    "population": 5000000,
+    "runways": 5,
+    "category": "Крупный международный"
+  },
+  {
+    "iata": "SVO",
+    "name": "Sheremetyevo International",
+    "city": "Moscow",
+    "country": "Russia",
+    "lat": 55.9726,
+    "lon": 37.4146,
+    "population": 13000000,
+    "runways": 5,
+    "category": "Крупный международный"
+  },
+  {
+    "iata": "DME",
+    "name": "Domodedovo International",
+    "city": "Moscow",
+    "country": "Russia",
+    "lat": 55.4088,
+    "lon": 37.9063,
+    "population": 13000000,
+    "runways": 2,
+    "category": "Международный"
+  },
+  {
+    "iata": "FCO",
+    "name": "Rome Fiumicino",
+    "city": "Rome",
+    "country": "Italy",
+    "lat": 41.8003,
+    "lon": 12.2389,
+    "population": 2800000,
+    "runways": 4,
+    "category": "Международный"
+  },
+  {
+    "iata": "MAD",
+    "name": "Adolfo Suárez Madrid–Barajas",
+    "city": "Madrid",
+    "country": "Spain",
+    "lat": 40.4983,
+    "lon": -3.5676,
+    "population": 3300000,
+    "runways": 4,
+    "category": "Международный"
+  },
+  {
+    "iata": "DOH",
+    "name": "Hamad International",
+    "city": "Doha",
+    "country": "Qatar",
+    "lat": 25.2731,
+    "lon": 51.6081,
+    "population": 2400000,
+    "runways": 2,
+    "category": "Международный"
+  },
+  {
+    "iata": "HKG",
+    "name": "Hong Kong International",
+    "city": "Hong Kong",
+    "country": "China",
+    "lat": 22.308,
+    "lon": -113.9185,
+    "population": 7400000,
+    "runways": 2,
+    "category": "Международный"
+  },
+  {
+    "iata": "SYD",
+    "name": "Sydney Kingsford Smith",
+    "city": "Sydney",
+    "country": "Australia",
+    "lat": -33.9399,
+    "lon": 151.1753,
+    "population": 5500000,
+    "runways": 3,
+    "category": "Международный"
+  },
+  {
+    "iata": "YYZ",
+    "name": "Toronto Pearson",
+    "city": "Toronto",
+    "country": "Canada",
+    "lat": 43.6777,
+    "lon": -79.6248,
+    "population": 2900000,
+    "runways": 5,
+    "category": "Крупный международный"
+  }
+]
