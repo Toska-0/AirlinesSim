@@ -74,7 +74,9 @@ jobs:
       - name: Export debug APK
         run: |
           mkdir -p build
-          godot --headless --path . --export-debug "Android" build/AirlinesSim-debug.apk
+          set -o pipefail
+          godot --headless --verbose --path . --export-debug "Android" build/AirlinesSim-debug.apk 2>&1 | tee build/export.log
+          test -s build/AirlinesSim-debug.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
