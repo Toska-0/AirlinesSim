@@ -29,7 +29,7 @@ func new_company(company_name: String, code: String, country: String, hub_iata: 
 	state = {
 		"version": SAVE_VERSION,
 		"company": {"name": company_name, "code": code.to_upper(), "country": country, "hub": hub_iata, "reputation": 50.0, "level": 1, "xp": 0},
-		"money": 25000000.0,
+		"money": 45000000.0,
 		"day": 1,
 		"minute": 360,
 		"aircraft": [],
@@ -133,7 +133,8 @@ func _complete_flight(plane: Dictionary, route: Dictionary, model: Dictionary) -
 	var seats := int(model.seats)
 	var passengers := mini(seats, demand)
 	var revenue := passengers * float(route.ticket_price)
-	var fuel_cost := float(route.distance) * float(model.fuel_per_km) * 0.85
+	var flight_hours := float(route.distance) / maxf(1.0, float(model.speed_kmh))
+	var fuel_cost := flight_hours * float(model.fuel_per_hour) * 0.9
 	var airport_fees := 2200.0 + float(route.distance) * 0.8
 	var maintenance := float(route.distance) * 1.15
 	var profit := revenue - fuel_cost - airport_fees - maintenance
@@ -233,3 +234,7 @@ func _distance_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 	var dl := deg_to_rad(lon2 - lon1)
 	var h := sin(dp / 2.0) ** 2 + cos(p1) * cos(p2) * sin(dl / 2.0) ** 2
 	return r * 2.0 * atan2(sqrt(h), sqrt(1.0 - h))
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_APPLICATION_PAUSED or what == NOTIFICATION_WM_CLOSE_REQUEST:
+		autosave()
