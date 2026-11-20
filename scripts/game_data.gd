@@ -71,7 +71,7 @@ func create_route(from_iata: String, to_iata: String, aircraft_id: String, ticke
 	if from_iata == to_iata or get_airport(from_iata).is_empty() or get_airport(to_iata).is_empty():
 		return false
 	for route in state.routes:
-		if route.from == from_iata and route.to == to_iata:
+		if route["from"] == from_iata and route["to"] == to_iata:
 			return false
 	var plane_index := -1
 	for i in state.aircraft.size():
