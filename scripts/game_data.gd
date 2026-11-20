@@ -17,7 +17,7 @@ var _accumulator := 0.0
 func _ready() -> void:
 	aircraft_catalog = _read_json(AIRCRAFT_PATH)
 	airports = _read_json(AIRPORTS_PATH)
-	DirAccess.make_dir_recursive_absolute(SAVE_DIR)
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(SAVE_DIR))
 
 func _read_json(path: String) -> Array:
 	if not FileAccess.file_exists(path):
@@ -189,7 +189,13 @@ func get_airport(iata: String) -> Dictionary:
 	return {}
 
 func format_money(value: float) -> String:
-	return "$" + String.num_int64(roundi(value)).reverse().insert(" ", 3).reverse()
+	var raw := str(absi(roundi(value)))
+	var grouped := ""
+	for i in raw.length():
+		if i > 0 and (raw.length() - i) % 3 == 0:
+			grouped += " "
+		grouped += raw.substr(i, 1)
+	return ("-$" if value < 0.0 else "$") + grouped
 
 func save_game(slot: String = "autosave") -> bool:
 	if not has_game():
