@@ -51,7 +51,7 @@ func buy_aircraft(model_id: String) -> bool:
 	if float(state.money) < price:
 		return false
 	state.money = float(state.money) - price
-	var serial := state.aircraft.size() + 1
+	var serial: int = state.aircraft.size() + 1
 	state.aircraft.append({
 		"id": "AS-%03d" % serial,
 		"model_id": model_id,
