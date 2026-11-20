@@ -7,8 +7,8 @@ Mobile-first airline management simulator built with **Godot 4** and GDScript.
 Included:
 - Android portrait project configuration.
 - Company creation (name, airline code, country, home airport).
-- Local aircraft catalogue with Airbus, Boeing, Embraer, ATR, Bombardier, COMAC and Sukhoi models.
-- Local airport dataset with IATA codes, coordinates, runway counts and city metadata.
+- Local aircraft catalogue with 33 aircraft variants across Airbus, Boeing, Embraer, ATR, Bombardier, COMAC and Sukhoi.
+- Local airport dataset with 20 airports, IATA codes, coordinates, runway counts and city metadata.
 - Aircraft purchase and fleet records.
 - Route creation with aircraft range and home-location checks.
 - Time simulation (pause, 1x, 2x, 4x, 8x).
