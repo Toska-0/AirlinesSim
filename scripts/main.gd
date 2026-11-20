@@ -199,7 +199,7 @@ func _page_routes() -> void:
 	for route in GameData.state.routes:
 		_card(route.from + " → " + route.to, route.status + "  •  " + str(route.distance) + " км", "%d пассажиров  |  результат %s" % [route.passengers, GameData.format_money(route.profit)])
 	_section("НОВЫЙ МАРШРУТ", "Выберите самолёт, находящийся в аэропорту отправления")
-	var from := _option_picker("Откуда", _airport_options(), GameData.state.company.hub)
+	var from_picker := _option_picker("Откуда", _airport_options(), GameData.state.company.hub)
 	var to := _option_picker("Куда", _airport_options(), "LHR")
 	var planes := []
 	for plane in GameData.state.aircraft:
@@ -215,10 +215,10 @@ func _page_routes() -> void:
 	var create := Button.new()
 	create.text = "РАССЧИТАТЬ И ОТКРЫТЬ МАРШРУТ"
 	create.pressed.connect(func():
-		if from.get_item_count() == 0 or to.get_item_count() == 0 or plane_picker.get_item_count() == 0:
+		if from_picker.get_item_count() == 0 or to.get_item_count() == 0 or plane_picker.get_item_count() == 0:
 			_toast("Нет доступного самолёта или аэропорта")
 			return
-		var ok := GameData.create_route(from.get_item_metadata(from.selected), to.get_item_metadata(to.selected), plane_picker.get_item_metadata(plane_picker.selected), price.value)
+		var ok := GameData.create_route(from_picker.get_item_metadata(from_picker.selected), to.get_item_metadata(to.selected), plane_picker.get_item_metadata(plane_picker.selected), price.value)
 		_toast("Маршрут открыт" if ok else "Не удалось открыть: проверьте дальность, базирование и состояние самолёта")
 		_refresh()
 	)
