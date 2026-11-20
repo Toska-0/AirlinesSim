@@ -12,6 +12,7 @@ var root_box: VBoxContainer
 var content: VBoxContainer
 var header: HBoxContainer
 var status_label: Label
+var autosave_elapsed := 0.0
 
 func _ready() -> void:
 	_build_shell()
@@ -23,6 +24,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	GameData.advance_simulation(delta)
 	if GameData.has_game():
+		autosave_elapsed += delta
+		if autosave_elapsed >= 30.0:
+			autosave_elapsed = 0.0
+			GameData.autosave()
 		_refresh_header()
 
 func _build_shell() -> void:
